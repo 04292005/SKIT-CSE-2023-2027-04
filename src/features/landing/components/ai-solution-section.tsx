@@ -38,7 +38,7 @@ export function AiSolutionSection() {
             initial={prefersReducedMotion ? undefined : "hidden"}
             animate={isInView || prefersReducedMotion ? "visible" : "hidden"}
             variants={staggerContainer}
-            aria-label="Community Hero resolution flow"
+            aria-label="NagarSeva resolution flow"
           >
             {AI_SOLUTION.flow.map((step, index) => (
               <li key={step.id}>

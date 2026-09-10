@@ -83,7 +83,7 @@ export function Navbar() {
         >
           <Image
             src="/logo.png"
-            alt="Community Hero"
+            alt="NagarSeva"
             width={320}
             height={90}
             priority

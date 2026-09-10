@@ -4,8 +4,8 @@ import { initReactI18next } from "react-i18next";
 const en = {
   translation: {
     auth: {
-      badge: "COMMUNITY HERO • SECURE WORKSPACE",
-      title: "Secure access to Community Hero",
+      badge: "NAGARSEVA • SECURE WORKSPACE",
+      title: "Secure access to NagarSeva",
       description: "Sign in securely using your Google account to report civic issues, track report progress, collaborate with your community, and access your personalized dashboard.",
       signInButton: "Sign in with Google",
       signingIn: "Signing in...",
@@ -19,16 +19,16 @@ const en = {
     privacy: {
       eyebrow: "Project policy",
       title: "Privacy Policy",
-      description: "A plain-language overview of the information Community Hero uses and how the current demonstration handles it.",
+      description: "A plain-language overview of the information NagarSeva uses and how the current demonstration handles it.",
       updated: "28 June 2026",
       sections: {
         data_collection: {
           title: "Data Collection",
-          description: "Community Hero collects the information needed to operate the civic reporting demonstration. This can include your Google account name, email address, report description, category, report status, and technical timestamps."
+          description: "NagarSeva collects the information needed to operate the civic reporting demonstration. This can include your Google account name, email address, report description, category, report status, and technical timestamps."
         },
         authentication: {
           title: "Authentication",
-          description: "Google sign-in is handled through Firebase Authentication. Community Hero uses your authenticated user identifier to associate reports with your account. Passwords are not collected or stored by this application."
+          description: "Google sign-in is handled through Firebase Authentication. NagarSeva uses your authenticated user identifier to associate reports with your account. Passwords are not collected or stored by this application."
         },
         firebase: {
           title: "Firebase Usage",
@@ -44,11 +44,11 @@ const en = {
         },
         voice: {
           title: "Voice Interaction",
-          description: "Speech-to-Text and Text-to-Speech use browser-provided Web Speech capabilities. Browser and operating-system vendors may process speech according to their own policies. Community Hero does not intentionally store raw voice recordings."
+          description: "Speech-to-Text and Text-to-Speech use browser-provided Web Speech capabilities. Browser and operating-system vendors may process speech according to their own policies. NagarSeva does not intentionally store raw voice recordings."
         },
         cookies: {
           title: "Cookies and Local Storage",
-          description: "Firebase Authentication may use browser storage to maintain your signed-in session. Community Hero also uses local browser storage for preferences such as language when you are signed out. No advertising cookies are intentionally added by this project."
+          description: "Firebase Authentication may use browser storage to maintain your signed-in session. NagarSeva also uses local browser storage for preferences such as language when you are signed out. No advertising cookies are intentionally added by this project."
         },
         contact: {
           title: "Contact",
@@ -59,12 +59,12 @@ const en = {
     terms: {
       eyebrow: "Project terms",
       title: "Terms of Service",
-      description: "Practical terms for responsible use of the Community Hero demonstration and its AI-assisted reporting workflow.",
+      description: "Practical terms for responsible use of the NagarSeva demonstration and its AI-assisted reporting workflow.",
       updated: "28 June 2026",
       sections: {
         acceptable_use: {
           title: "Acceptable Use",
-          description: "Use Community Hero only for lawful civic reporting and evaluation. Do not submit harassment, illegal material, intentionally false reports, malicious files, or content that violates another person’s privacy or safety."
+          description: "Use NagarSeva only for lawful civic reporting and evaluation. Do not submit harassment, illegal material, intentionally false reports, malicious files, or content that violates another person’s privacy or safety."
         },
         user_resp: {
           title: "User Responsibilities",
@@ -80,8 +80,8 @@ const en = {
         },
         notice: {
           title: "Municipal Demonstration Notice",
-          description: "Community Hero is a solution-challenge project and civic workflow demonstration. Unless a participating authority explicitly states otherwise, submitting a report here does not replace an official emergency or municipal reporting channel.",
-          item1: "Do not use Community Hero for emergencies.",
+          description: "NagarSeva is a solution-challenge project and civic workflow demonstration. Unless a participating authority explicitly states otherwise, submitting a report here does not replace an official emergency or municipal reporting channel.",
+          item1: "Do not use NagarSeva for emergencies.",
           item2: "Use local emergency services when immediate safety is at risk.",
           item3: "Demo metrics, forecasts, and community health indicators are illustrative where labelled."
         },
@@ -94,14 +94,14 @@ const en = {
     contact: {
       eyebrow: "Project Contact",
       title: "Let's Build More Responsive Communities",
-      description: "Community Hero explores how AI-assisted civic reporting helps residents and local authorities collaborate from issue reporting through transparent resolution.",
+      description: "NagarSeva explores how AI-assisted civic reporting helps residents and local authorities collaborate from issue reporting through transparent resolution.",
       challenge: {
         title: "Google Solution Challenge",
-        desc: "Community Hero demonstrates how responsible AI can improve transparency, accessibility and collaboration between citizens and local authorities."
+        desc: "NagarSeva demonstrates how responsible AI can improve transparency, accessibility and collaboration between citizens and local authorities."
       },
       developer: {
         title: "Project Developer",
-        name: "Shrestha Swami",
+        name: "NagarSeva Team",
         degree: "B.Tech Computer Science & Engineering (Data Science)",
         institution: "SKIT Jaipur",
         focus: "AI • Data Science • Civic Technology"
@@ -130,8 +130,8 @@ const en = {
       faq: {
         eyebrow: "Quick Answers",
         title: "Frequently Asked Questions",
-        q1: "Is Community Hero an official municipal service?",
-        a1: "No. Community Hero is currently a Google Solution Challenge project and civic workflow demonstration unless adopted by a participating authority.",
+        q1: "Is NagarSeva an official municipal service?",
+        a1: "No. NagarSeva is currently a Google Solution Challenge project and civic workflow demonstration unless adopted by a participating authority.",
         q2: "Does the contact form send messages?",
         a2: "No. This page currently demonstrates the user interface only. A production backend can be connected later.",
         q3: "Are homepage statistics real?",
@@ -222,8 +222,8 @@ const en = {
 
     footer: {
       about: {
-        title: "About Community Hero",
-        desc: "Community Hero is an AI-assisted civic reporting platform that empowers citizens and local authorities to collaborate through transparent issue reporting, multilingual accessibility, and real-time progress tracking.",
+        title: "About NagarSeva",
+        desc: "NagarSeva is an AI-assisted civic reporting platform that empowers citizens and local authorities to collaborate through transparent issue reporting, multilingual accessibility, and real-time progress tracking.",
       },
       tech: {
         title: "Technology Stack",
@@ -246,7 +246,7 @@ const en = {
       privacy: "Privacy",
       terms: "Terms",
       contact: "Contact",
-      copyright: "© {{year}} Community Hero. All rights reserved.",
+      copyright: "© {{year}} NagarSeva. All rights reserved.",
     },
     landing: {
       hero: {
@@ -256,7 +256,7 @@ const en = {
           before: "When neighbors speak up, ",
           highlight: "communities transform.",
         },
-        description: "Community Hero turns a single photo and voice note into a verified, prioritized, trackable civic action—so every report reaches the right authority and every resident stays informed.",
+        description: "NagarSeva turns a single photo and voice note into a verified, prioritized, trackable civic action—so every report reaches the right authority and every resident stays informed.",
         ctas: {
           primary: "Report an Issue",
           secondary: "Explore Live Map",
@@ -270,7 +270,7 @@ const en = {
       problem: {
         eyebrow: "The civic problem",
         title: "Reporting should connect people—not bury them in paperwork",
-        description: "Most cities still run on forms, phone trees, and hope. Citizens report once, then hear nothing. Trust erodes. Issues pile up. Community Hero exists to close that gap.",
+        description: "Most cities still run on forms, phone trees, and hope. Citizens report once, then hear nothing. Trust erodes. Issues pile up. NagarSeva exists to close that gap.",
         cards: {
           "black-hole": {
             title: "Reports vanish into a black hole",
@@ -293,7 +293,7 @@ const en = {
       solution: {
         eyebrow: "THE REPORT WORKFLOW",
         title: "From Report to Resolution",
-        description: "Community Hero guides every report through an AI-assisted civic workflow that helps residents, local authorities, and communities collaborate toward transparent issue resolution.",
+        description: "NagarSeva guides every report through an AI-assisted civic workflow that helps residents, local authorities, and communities collaborate toward transparent issue resolution.",
         flow: {
           citizen: {
             label: "Citizen",
@@ -333,7 +333,7 @@ const en = {
       },
       credibility: {
         title: "Built for Transparent Civic Collaboration",
-        description: "Community Hero demonstrates how AI-assisted workflows, multilingual accessibility, and transparent reporting can strengthen collaboration between citizens and local authorities.",
+        description: "NagarSeva demonstrates how AI-assisted workflows, multilingual accessibility, and transparent reporting can strengthen collaboration between citizens and local authorities.",
         cards: {
           ai: {
             title: "AI-Assisted Reporting",
@@ -404,7 +404,7 @@ const en = {
       google: {
         eyebrow: "TECHNOLOGY STACK",
         title: "Modern tech stack powered by AI & open standards",
-        description: "Community Hero combines Google AI, Firebase infrastructure, and open-source technologies to deliver secure, multilingual, AI-assisted civic reporting.",
+        description: "NagarSeva combines Google AI, Firebase infrastructure, and open-source technologies to deliver secure, multilingual, AI-assisted civic reporting.",
         technologies: {
           "ai-studio": {
             category: "AI Platform",
@@ -429,7 +429,7 @@ const en = {
           translate: {
             category: "Multilingual",
             title: "AI Powered Multilingual Translation",
-            description: "Gemini-powered multilingual translation enables citizens to interact with Community Hero in their preferred language."
+            description: "Gemini-powered multilingual translation enables citizens to interact with NagarSeva in their preferred language."
           },
           analytics: {
             category: "Visualization",

@@ -55,7 +55,7 @@ function exportCSV(reports: Report[]) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = `community-hero-reports-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.download = `nagar-seva-reports-${new Date().toISOString().slice(0, 10)}.csv`;
   a.click();
   URL.revokeObjectURL(url);
 }
@@ -74,10 +74,10 @@ function exportPDF(reports: Report[]) {
 
   const html = `
     <!DOCTYPE html><html><head>
-    <title>Community Hero Reports</title>
+    <title>NagarSeva Reports</title>
     <style>body{font-family:Arial,sans-serif;padding:24px;} table{width:100%;border-collapse:collapse;} th{background:#1e293b;color:white;padding:10px;text-align:left;font-size:12px;} td{vertical-align:top;}</style>
     </head><body>
-    <h1 style="font-size:20px;margin-bottom:4px;">Community Hero — Reports Export</h1>
+    <h1 style="font-size:20px;margin-bottom:4px;">NagarSeva — Reports Export</h1>
     <p style="font-size:12px;color:#64748b;margin-bottom:16px;">Exported on ${new Date().toLocaleString()} &nbsp;·&nbsp; Total: ${reports.length} reports</p>
     <table>
       <thead><tr><th>Category</th><th>Description</th><th>Status</th><th>Department</th><th>Priority</th><th>Created</th></tr></thead>

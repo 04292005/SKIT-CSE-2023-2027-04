@@ -54,8 +54,8 @@ export default function ContactPage() {
 
   const faqs = [
     {
-      question: t("contact.faq.q1", "Is Community Hero an official municipal service?"),
-      answer: t("contact.faq.a1", "No. Community Hero is currently a Google Solution Challenge project and civic workflow demonstration unless adopted by a participating authority."),
+      question: t("contact.faq.q1", "Is NagarSeva an official municipal service?"),
+      answer: t("contact.faq.a1", "No. NagarSeva is currently a Google Solution Challenge project and civic workflow demonstration unless adopted by a participating authority."),
     },
     {
       question: t("contact.faq.q2", "Does the contact form send messages?"),
@@ -81,7 +81,7 @@ export default function ContactPage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            {t("contact.description", "Community Hero explores how AI-assisted civic reporting helps residents and local authorities collaborate from issue reporting through transparent resolution.")}
+            {t("contact.description", "NagarSeva explores how AI-assisted civic reporting helps residents and local authorities collaborate from issue reporting through transparent resolution.")}
           </p>
         </header>
 
@@ -100,7 +100,7 @@ export default function ContactPage() {
               </h2>
 
               <p className="mt-3 text-sm leading-7 text-slate-600">
-                {t("contact.challenge.desc", "Community Hero demonstrates how responsible AI can improve transparency, accessibility and collaboration between citizens and local authorities.")}
+                {t("contact.challenge.desc", "NagarSeva demonstrates how responsible AI can improve transparency, accessibility and collaboration between citizens and local authorities.")}
               </p>
             </div>
 
@@ -111,60 +111,39 @@ export default function ContactPage() {
               </div>
 
               <h2 className="mt-4 text-xl font-semibold text-slate-900">
-                {t("contact.developer.title", "Project Developer")}
+                {t("contact.developer.title", "Project Team")}
               </h2>
 
               <div className="mt-4 space-y-1 text-sm text-slate-600">
-                <p className="font-bold text-slate-900 text-base">{t("contact.developer.name", "Shrestha Swami")}</p>
-                <p className="font-medium text-slate-700">{t("contact.developer.degree", "B.Tech Computer Science & Engineering (Data Science)")}</p>
-                <p className="text-slate-500">{t("contact.developer.institution", "SKIT Jaipur")}</p>
+                <p className="font-bold text-slate-900 text-base">{t("contact.developer.name", "NagarSeva Project Team")}</p>
+                <p className="font-medium text-slate-700">{t("contact.developer.degree", "Aaditya Bansal, Anmol Gupta, Anshul Nagar, Anushka Agrawal")}</p>
+                <p className="text-slate-500">{t("contact.developer.institution", "SKIT Jaipur — Computer Science & Engineering")}</p>
                 <div className="mt-3">
                   <span className="inline-flex rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-semibold text-emerald-700 border border-emerald-100">
-                    {t("contact.developer.focus", "AI • Data Science • Civic Technology")}
+                    {t("contact.developer.focus", "AI • GIS • Civic Technology • Web Platform")}
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Connect with the Developer Card */}
+            {/* Connect with the Team Card */}
             <div
               id="project-links"
               className="p-6 rounded-3xl border border-slate-200 bg-white/90 backdrop-blur-sm shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <h2 className="text-xl font-semibold text-slate-900">
-                {t("contact.links.title", "Connect with the Developer")}
+                {t("contact.links.title", "Project Repository")}
               </h2>
 
               <div className="mt-5 space-y-4">
-
                 <a 
-                  href="mailto:shresthaswami25@gmail.com" 
-                  className="flex items-center gap-3 text-slate-600 hover:text-emerald-700 transition-colors"
-                >
-                  <Mail className="h-5 w-5 text-emerald-700" />
-                  <span className="text-sm sm:text-base font-medium underline decoration-slate-300 hover:decoration-emerald-500">shresthaswami25@gmail.com</span>
-                </a>
-
-                <a 
-                  href="https://github.com/Shrestha-Swami/community-hero" 
+                  href="https://github.com/CodeBreaker-0111/SKIT-CSE-2023-2027-04" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center gap-3 text-slate-600 hover:text-emerald-700 transition-colors"
                 >
                   <Globe className="h-5 w-5 text-emerald-700" />
-                  <span className="text-sm sm:text-base font-medium underline decoration-slate-300 hover:decoration-emerald-500">{t("contact.links.github", "GitHub Profile")}</span>
-                </a>
-
-                <a 
-                  href="https://linkedin.com/in/shrestha-swami" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="flex items-center gap-3 text-slate-600 hover:text-emerald-700 transition-colors"
-                >
-                  <svg className="h-5 w-5 text-emerald-700 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/>
-                  </svg>
-                  <span className="text-sm sm:text-base font-medium underline decoration-slate-300 hover:decoration-emerald-500">{t("contact.links.linkedin", "LinkedIn Profile")}</span>
+                  <span className="text-sm sm:text-base font-medium underline decoration-slate-300 hover:decoration-emerald-500">{t("contact.links.github", "Official GitHub Repository")}</span>
                 </a>
 
               </div>

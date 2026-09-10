@@ -26,7 +26,7 @@ export const HERO = {
     highlight: "communities transform.",
   },
   description:
-    "Community Hero transforms a citizen report into an AI-assisted, prioritized, and trackable civic workflow—helping residents and local authorities collaborate more effectively from reporting to resolution.",
+    "NagarSeva transforms a citizen report into an AI-assisted, prioritized, and trackable civic workflow—helping residents and local authorities collaborate more effectively from reporting to resolution.",
   ctas: {
     primary: {
       label: "Report an Issue",
@@ -54,7 +54,7 @@ export const CIVIC_PROBLEM = {
   eyebrow: "The civic problem",
   title: "Reporting should connect people—not bury them in paperwork",
   description:
-    "Most cities still run on forms, phone trees, and hope. Citizens report once, then hear nothing. Trust erodes. Issues pile up. Community Hero exists to close that gap.",
+    "Most cities still run on forms, phone trees, and hope. Citizens report once, then hear nothing. Trust erodes. Issues pile up. NagarSeva exists to close that gap.",
   cards: [
     {
       id: "black-hole",
@@ -103,7 +103,7 @@ export const AI_SOLUTION = {
   eyebrow: "THE REPORT WORKFLOW",
   title: "From Report to Resolution",
   description:
-    "Community Hero guides every report through an AI-assisted civic workflow that helps residents, local authorities, and communities collaborate toward transparent issue resolution.",
+    "NagarSeva guides every report through an AI-assisted civic workflow that helps residents, local authorities, and communities collaborate toward transparent issue resolution.",
   flow: [
     { id: "citizen", label: "Citizen", detail: "Snaps a photo, records a voice note, or taps a map pin" },
     { id: "agents", label: "AI Agents", detail: "Six specialized agents analyze, verify, and route the report" },
@@ -210,7 +210,7 @@ export const GOOGLE_TECH = {
   eyebrow: "Technology Stack",
   title: "Modern tech stack powered by AI & open standards",
   description:
-    "Community Hero combines Google AI, Firebase infrastructure, and open-source maps to deliver a secure, localized experience.",
+    "NagarSeva combines Google AI, Firebase infrastructure, and open-source maps to deliver a secure, localized experience.",
   technologies: [
     {
       id: "ai-studio",
@@ -245,7 +245,7 @@ export const GOOGLE_TECH = {
       icon: Languages,
       title: "AI Powered Multilingual Translation",
       category: "Translation",
-      description: "Gemini-powered multilingual translation enables citizens to interact with Community Hero in their preferred language.",
+      description: "Gemini-powered multilingual translation enables citizens to interact with NagarSeva in their preferred language.",
     },
     {
       id: "analytics",

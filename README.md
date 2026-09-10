@@ -1,234 +1,104 @@
-# Community Hero
+# NagarSeva – AI-Powered Civic Issue Reporting Platform
 
-AI-powered multilingual civic issue reporting platform built for Google Solution Challenge.
+**Project ID:** SKIT/CSE/2023-2027/04  
+**Institution:** Swami Keshvanand Institute of Technology, Management & Gramothan (SKIT), Jaipur  
+**Department:** Computer Science & Engineering (CSE) | Section A  
+**Track:** Innovation | **SDG Mapping:** SDG 11 – Sustainable Cities and Communities  
+**External Evaluation:** Poster Competition  
+**Repository:** [https://github.com/CodeBreaker-0111/SKIT-CSE-2023-2027-04](https://github.com/CodeBreaker-0111/SKIT-CSE-2023-2027-04)  
 
-![Next.js](https://img.shields.io/badge/Next.js-16.2.9-black?logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
-![Firebase](https://img.shields.io/badge/Firebase-Auth%20%2B%20Firestore-orange)
-![Gemini AI](https://img.shields.io/badge/Gemini-AI%20Vision%20%26%20Translation-8E75FF)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC)
-![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-Leaflet-2F8555)
-![Google Solution Challenge](https://img.shields.io/badge/Google-Solution%20Challenge%202026-4285F4)
-![License](https://img.shields.io/badge/License-Not%20Declared-lightgrey)
+---
 
-## Overview
+## 📌 Project Overview
 
-Community Hero addresses a common civic gap: residents often report issues through fragmented channels, but they rarely receive transparent follow-up. This project provides a modern, multilingual experience for citizens to submit civic issues with images or voice notes, receive AI-assisted analysis, and track their reports through a live workflow.
+**NagarSeva** is an AI-powered civic issue reporting and tracking platform designed for citizens and municipal authorities in Jaipur. The platform enables residents to report civic problems (potholes, garbage dumps, street lighting, water leakage, etc.) with description, location, and media evidence. Integrated AI capabilities automatically analyze media, predict issue severity and priority, and recommend the relevant municipal department.
 
-The platform is designed to strengthen transparency between citizens and local authorities by combining Firebase-backed data storage, Gemini-based AI assistance, multilingual interaction, and interactive maps.
+---
 
-## Features
+## 👥 Project Team & Roles
 
-| Feature | Status |
-| --- | --- |
-| AI-assisted report analysis | ✓ |
-| Image and video analysis with Gemini | ✓ |
-| Speech-to-text reporting | ✓ |
-| Text-to-speech for report details | ✓ |
-| Multilingual interface and translation | ✓ |
-| Firebase Authentication | ✓ |
-| Firestore-based report and profile storage | ✓ |
-| Live report tracking | ✓ |
-| Interactive OpenStreetMap experience | ✓ |
-| Dashboard for citizens | ✓ |
-| Admin panel for report oversight | ✓ |
-| Responsive UI | ✓ |
+| Name | Role & Expertise | Technical Scope |
+| --- | --- | --- |
+| **Aaditya Bansal** | Team Lead (AI/ML & GIS) | Project Management, System Architecture, Gemini AI Integration, Jaipur Ward Mapping |
+| **Anmol Gupta** | Member 1 (Backend & DB) | Backend Services, Supabase PostgreSQL, RLS Policies, Database Architecture |
+| **Anshul Nagar** | Member 2 (Frontend/UI) | Next.js/React Frontend, Tailwind UI, Report Form, Responsive Dashboard, Map UI |
+| **Anushka Agrawal** | Member 3 (Testing & Integration) | API Integration, Testing, Twilio Notifications, Accessibility, i18n & Speech APIs |
 
-## Workflow
+---
 
-```mermaid
-flowchart TD
-    A[Citizen] --> B[Upload Image / Voice]
-    B --> C[Gemini AI Analysis]
-    C --> D[Priority & Department Assignment]
-    D --> E[Firestore]
-    E --> F[Admin Dashboard]
-    F --> G[Status Updates]
-    G --> H[Citizen Tracking]
-```
+## 🛠️ Technology Stack
 
-## Tech Stack
+| Layer | Technologies | Status |
+| --- | --- | --- |
+| **Frontend** | Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4 | Active |
+| **Backend & DB** | Supabase PostgreSQL, Supabase Auth, Supabase Storage *(Migrating from Firebase)* | Active / In Migration |
+| **AI Integration** | Google Gemini API (`@google/genai` with `gemini-3.6-flash`) | Active |
+| **GIS & Mapping** | OpenStreetMap, Leaflet, `react-leaflet`, Jaipur Ward Datasets | Active / Ward Layer In Dev |
+| **Notifications** | Twilio SMS/APIs | Planned (Sprint 7) |
+| **Accessibility & i18n** | `i18next`, `react-i18next`, Web Speech API (STT/TTS) | Active |
 
-| Area | Technologies |
-| --- | --- |
-| Frontend | Next.js 16, React 19, TypeScript |
-| Styling | Tailwind CSS, shadcn/ui, Radix UI |
-| Backend | Next.js App Router API routes |
-| Database | Firebase Firestore |
-| Authentication | Firebase Authentication |
-| AI | Gemini via @google/genai |
-| Maps | OpenStreetMap, Leaflet, react-leaflet |
-| UI Motion | Framer Motion |
-| Internationalization | i18next, react-i18next |
-| Deployment | Production-ready Next.js build for cloud deployment |
+---
 
-## Google Technologies Used
+## 🗺️ Official 8-Sprint Development Roadmap
 
-Community Hero uses the following Google technologies directly in the current implementation:
+1. **Sprint 1: System & UI Foundation** *(Completed)*
+   - Project structure, responsive Next.js App Router layout, design tokens, core page routing.
+2. **Sprint 2: Authentication & Database** *(In Progress)*
+   - Supabase Auth setup, PostgreSQL database schema (`profiles`, `reports`, `report_status_history`), RLS policies.
+3. **Sprint 3: Issue Reporting & Media** *(In Progress)*
+   - Citizen report submission form, media upload validation, Supabase Storage `report-media` bucket.
+4. **Sprint 4: AI Analysis & Categorization** *(Active)*
+   - Gemini 3.6 Flash vision analysis, category classification, severity & priority scoring, department routing.
+5. **Sprint 5: Jaipur GIS & Ward Mapping** *(In Progress)*
+   - Jaipur map centering (`[26.9124, 75.7873]`), Leaflet markers, Jaipur ward boundary GeoJSON integration, hotspot visualization.
+6. **Sprint 6: Dashboard & Tracking** *(In Progress)*
+   - Citizen "My Reports" status tracking, Admin monitoring dashboard, status updates & filtering.
+7. **Sprint 7: Notifications & Accessibility** *(Planned)*
+   - Twilio notifications, multilingual language toggle, Web Speech voice interaction, accessibility enhancements.
+8. **Sprint 8: Integration, Testing & Deployment** *(Planned)*
+   - End-to-end integration testing, security audit, build verification, deployment configuration.
 
-- Gemini API for image and video analysis, AI-generated summaries, priority scoring, department recommendations, and translation.
-- Firebase Authentication for secure sign-in and user sessions.
-- Cloud Firestore for storing reports, user profiles, and report status history.
-- Google AI Studio concepts are reflected through the Gemini integration used by the application.
+---
 
-## Project Structure
+## 🏗️ Project Architecture & Migration Status
+
+The NagarSeva platform is currently executing a progressive migration from legacy prototype infrastructure to cloud-scale relational architecture:
 
 ```text
-src/
-  ai/
-    agents/
-    gemini/
-  app/
-    api/ai/analyze/
-    api/ai/translate/
-    admin/
-    dashboard/
-    map/
-    report/
-    reports/
-    contact/
-    privacy/
-    terms/
-  components/
-  features/
-    admin/
-    analytics/
-    auth/
-    dashboard/
-    landing/
-    location/
-    map/
-    profile/
-    report/
-    tracking/
-    gamification/
-  firebase/
-  i18n/
+Next.js / React Frontend (TypeScript + Tailwind CSS)
+       │
+       ├─► Supabase Auth (OAuth & User Sessions)
+       ├─► Supabase PostgreSQL (profiles, reports, status history)
+       ├─► Supabase Storage (report-media bucket)
+       ├─► Google Gemini API (Image/Video analysis, priority scoring, translation)
+       └─► Leaflet / OpenStreetMap (Jaipur ward-wise GIS mapping)
 ```
 
-## Installation
+> **Note on Legacy Modules:** Firebase authentication and Firestore code are being systematically replaced by Supabase services. Firebase modules are retained strictly to preserve working application state until Supabase backend migration passes full integration testing.
+
+---
+
+## ⚡ Local Setup Instructions
 
 ```bash
-git clone https://github.com/Shrestha-Swami/community-hero.git
-cd community-hero
+# 1. Clone repository
+git clone https://github.com/CodeBreaker-0111/SKIT-CSE-2023-2027-04.git
+cd SKIT-CSE-2023-2027-04
+
+# 2. Install dependencies
 npm install
+
+# 3. Configure environment variables (.env.local)
+# Add NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY, GOOGLE_API_KEY
+
+# 4. Start local development server
 npm run dev
 ```
 
-The app will be available at http://localhost:3000.
+Application will run locally at `http://localhost:3000`.
 
-## Environment Variables
+---
 
-Create a local environment file with the variables below before running the app.
+## 📄 License & Evaluation Context
 
-### Required
-
-```env
-NEXT_PUBLIC_FIREBASE_API_KEY=
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
-NEXT_PUBLIC_FIREBASE_APP_ID=
-GOOGLE_API_KEY=
-```
-
-### Optional
-
-```env
-NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=
-GEMINI_MODEL=gemini-2.5-flash
-```
-
-## AI Workflow
-
-The AI workflow in the current repository is implemented as follows:
-
-- Image upload: citizens can attach an image or video during report submission.
-- Gemini vision analysis: the uploaded media is sent to the analysis API, which returns category, severity, confidence, priority score, department, and summary.
-- Priority prediction: the AI response includes a priority score used in the interface and admin views.
-- Department recommendation: the analysis returns a recommended department for routing.
-- Summary generation: the platform stores and displays an AI-generated summary for each report.
-- Translation: the app includes a dedicated translation route for multilingual content support.
-
-## Localization
-
-Community Hero currently supports the following languages in the interface:
-
-- English
-- Hindi
-- Gujarati
-- Marathi
-- Bengali
-- Tamil
-- Telugu
-- Kannada
-
-The UI is powered by i18next and react-i18next, with dynamic translation support for report summaries and interface content. Voice accessibility is also included through browser-based speech recognition and speech synthesis.
-
-## Screenshots
-
-Screenshots can be added here once the project is deployed or captured locally.
-
-- Hero section
-- Report page
-- Live map
-- Dashboard
-- Admin panel
-- Tracking view
-- Authentication flow
-
-## Performance
-
-The current implementation emphasizes a polished user experience through:
-
-- Responsive design for desktop and mobile screens
-- Next.js App Router structure
-- Dynamic loading for the interactive map component
-- Framer Motion animations and polished transitions
-- Accessibility-friendly form controls and labels
-
-## Deployment
-
-Community Hero is built as a standard Next.js application and is suitable for deployment on Google Cloud.
-
-Recommended production flow:
-
-```bash
-npm run build
-```
-
-Deploy the built application with the required environment variables configured in your cloud environment.
-
-## Future Scope
-
-Potential next steps include:
-
-- Government ERP integration
-- Push notifications
-- Advanced analytics and reporting dashboards
-
-## Author
-
-Name: Shrestha Swami
-
-Role: B.Tech CSE (Data Science), SKIT Jaipur
-
-GitHub: https://github.com/Shrestha-Swami/community-hero
-
-LinkedIn: https://www.linkedin.com/in/shrestha-swami/
-
-Email: shresthaswami25@gmail.com
-
-## Acknowledgements
-
-- Google Solution Challenge
-- Firebase
-- Google AI Studio / Gemini
-- Next.js
-- OpenStreetMap
-- Leaflet
-
-## License
-
-No license file is currently present in this repository, so the project does not declare a license yet.
+Developed for official academic evaluation under **SKIT Jaipur - CSE Department (2023-2027)** for **Poster Competition & Innovation Track**.

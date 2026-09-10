@@ -23,7 +23,7 @@ export default function PrivacyPage() {
       icon: UserRound,
       description: t(
         "privacy.sections.data_collection.description",
-        "Community Hero collects the information needed to operate the civic reporting demonstration. This can include your Google account name, email address, report description, category, report status, and technical timestamps."
+        "NagarSeva collects the information needed to operate the civic reporting demonstration. This can include your Google account name, email address, report description, category, report status, and technical timestamps."
       ),
     },
     {
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
       icon: LockKeyhole,
       description: t(
         "privacy.sections.authentication.description",
-        "Google sign-in is handled through Firebase Authentication. Community Hero uses your authenticated user identifier to associate reports with your account. Passwords are not collected or stored by this application."
+        "Google sign-in is handled through Firebase Authentication. NagarSeva uses your authenticated user identifier to associate reports with your account. Passwords are not collected or stored by this application."
       ),
     },
     {
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
       icon: Mic,
       description: t(
         "privacy.sections.voice.description",
-        "Speech-to-Text and Text-to-Speech use browser-provided Web Speech capabilities. Browser and operating-system vendors may process speech according to their own policies. Community Hero does not intentionally store raw voice recordings."
+        "Speech-to-Text and Text-to-Speech use browser-provided Web Speech capabilities. Browser and operating-system vendors may process speech according to their own policies. NagarSeva does not intentionally store raw voice recordings."
       ),
     },
     {
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
       icon: Cookie,
       description: t(
         "privacy.sections.cookies.description",
-        "Firebase Authentication may use browser storage to maintain your signed-in session. Community Hero also uses local browser storage for preferences such as language when you are signed out. No advertising cookies are intentionally added by this project."
+        "Firebase Authentication may use browser storage to maintain your signed-in session. NagarSeva also uses local browser storage for preferences such as language when you are signed out. No advertising cookies are intentionally added by this project."
       ),
     },
     {
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
       title={t("privacy.title", "Privacy Policy")}
       description={t(
         "privacy.description",
-        "A plain-language overview of the information Community Hero uses and how the current demonstration handles it."
+        "A plain-language overview of the information NagarSeva uses and how the current demonstration handles it."
       )}
       updated={t("privacy.updated", "28 June 2026")}
       sections={sections}

@@ -44,7 +44,7 @@ export function Footer() {
             <div className="flex items-center">
               <Image
                 src="/logo.png"
-                alt="Community Hero"
+                alt="NagarSeva"
                 width={320}
                 height={90}
                 className="h-20 w-auto"
@@ -52,7 +52,7 @@ export function Footer() {
             </div>
 
             <p className="mt-4 text-sm leading-7 text-slate-600">
-              {t("footer.about.desc", "Community Hero is an AI-assisted civic reporting platform that empowers citizens and local authorities to collaborate through transparent issue reporting, multilingual accessibility, and real-time progress tracking.")}
+              {t("footer.about.desc", "NagarSeva is an AI-assisted civic reporting platform that empowers citizens and local authorities to collaborate through transparent issue reporting, multilingual accessibility, and real-time progress tracking.")}
             </p>
           </div>
 
@@ -115,20 +115,20 @@ export function Footer() {
 
               <div className="mt-5 border-t border-emerald-200 pt-4">
                 <p className="text-xs uppercase tracking-[0.25em] text-slate-500">
-                  Created By
+                  Project Team
                 </p>
 
-                <p className="mt-2 font-semibold text-slate-900">
-                  Shrestha Swami
+                <p className="mt-2 font-semibold text-slate-900 text-xs">
+                  SKIT CSE Team #04
                 </p>
 
                 <a
-                  href="https://www.linkedin.com/in/shrestha-swami/"
+                  href="https://github.com/CodeBreaker-0111/SKIT-CSE-2023-2027-04"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-3 inline-flex text-sm font-medium text-emerald-600 transition-colors hover:text-emerald-700"
                 >
-                  LinkedIn →
+                  GitHub Repository →
                 </a>
               </div>
             </div>
