@@ -67,7 +67,7 @@ export function FinalCtaSection() {
             {t("landing.credibility.title", "Built for Transparent Civic Collaboration")}
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-slate-600 lg:text-lg">
-            {t("landing.credibility.description", "Community Hero demonstrates how AI-assisted workflows, multilingual accessibility, and transparent reporting can strengthen collaboration between citizens and local authorities.")}
+            {t("landing.credibility.description", "NagarSeva demonstrates how AI-assisted workflows, multilingual accessibility, and transparent reporting can strengthen collaboration between citizens and local authorities.")}
           </p>
         </motion.div>
 

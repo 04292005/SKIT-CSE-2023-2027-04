@@ -21,7 +21,7 @@ export default function TermsPage() {
       icon: ShieldCheck,
       description: t(
         "terms.sections.acceptable_use.description",
-        "Use Community Hero only for lawful civic reporting and evaluation. Do not submit harassment, illegal material, intentionally false reports, malicious files, or content that violates another person’s privacy or safety."
+        "Use NagarSeva only for lawful civic reporting and evaluation. Do not submit harassment, illegal material, intentionally false reports, malicious files, or content that violates another person’s privacy or safety."
       ),
     },
     {
@@ -53,10 +53,10 @@ export default function TermsPage() {
       icon: Building2,
       description: t(
         "terms.sections.notice.description",
-        "Community Hero is a solution-challenge project and civic workflow demonstration. Unless a participating authority explicitly states otherwise, submitting a report here does not replace an official emergency or municipal reporting channel."
+        "NagarSeva is a solution-challenge project and civic workflow demonstration. Unless a participating authority explicitly states otherwise, submitting a report here does not replace an official emergency or municipal reporting channel."
       ),
       items: [
-        t("terms.sections.notice.item1", "Do not use Community Hero for emergencies."),
+        t("terms.sections.notice.item1", "Do not use NagarSeva for emergencies."),
         t("terms.sections.notice.item2", "Use local emergency services when immediate safety is at risk."),
         t("terms.sections.notice.item3", "Demo metrics, forecasts, and community health indicators are illustrative where labelled."),
       ] as const,
@@ -77,7 +77,7 @@ export default function TermsPage() {
       title={t("terms.title", "Terms of Service")}
       description={t(
         "terms.description",
-        "Practical terms for responsible use of the Community Hero demonstration and its AI-assisted reporting workflow."
+        "Practical terms for responsible use of the NagarSeva demonstration and its AI-assisted reporting workflow."
       )}
       updated={t("terms.updated", "28 June 2026")}
       sections={sections}

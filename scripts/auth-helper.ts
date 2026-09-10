@@ -52,7 +52,7 @@ export function startAuthServer(firebaseConfig: any): Promise<{
 </head>
 <body style="font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background-color: #f8fafc; color: #0f172a; margin: 0;">
   <div style="background-color: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); text-align: center; max-width: 400px; width: 90%;">
-    <h2 style="margin-bottom: 10px;">Community Hero</h2>
+    <h2 style="margin-bottom: 10px;">NagarSeva</h2>
     <p style="color: #64748b; margin-bottom: 30px; font-size: 14px;">Sign in with Google to authorize the seeder script.</p>
     <button id="loginBtn" style="padding: 12px 24px; font-size: 16px; cursor: pointer; background-color: #0f172a; color: #ffffff; border: none; border-radius: 12px; font-weight: 600; transition: background-color 0.2s;">Sign in with Google</button>
   </div>

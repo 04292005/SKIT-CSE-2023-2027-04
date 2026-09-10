@@ -1,8 +1,8 @@
 export const SITE = {
-  name: "Community Hero",
-  tagline: "AI-assisted civic reporting for stronger communities",
+  name: "NagarSeva",
+  tagline: "AI-Powered Civic Issue Reporting Platform",
   description:
-    "Community Hero helps residents report civic issues and follow their progress through an AI-assisted, transparent workflow.",
+    "NagarSeva is an AI-powered civic issue reporting and tracking platform designed to make civic reporting easier, smarter and more transparent.",
 } as const
 
 export const NAV_LINKS = [

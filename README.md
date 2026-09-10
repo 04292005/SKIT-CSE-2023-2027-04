@@ -1,125 +1,104 @@
-# 🏙️ NagarSeva
+# NagarSeva – AI-Powered Civic Issue Reporting Platform
 
-### AI-Powered Civic Issue Reporting Platform
-
-<p align="center">
-  <b>Report. Track. Improve.</b>
-</p>
-
-<p align="center">
-  NagarSeva is a smart, location-aware civic issue reporting platform designed
-  to make reporting easier, classification smarter, and issue tracking more transparent.
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Project-SKIT%2FCSE%2F2023--2027%2F04-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Track-Innovation-purple?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/SDG-11-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-In%20Development-orange?style=for-the-badge" />
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-16-black?logo=next.js" />
-  <img src="https://img.shields.io/badge/TypeScript-blue?logo=typescript" />
-  <img src="https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?logo=supabase" />
-  <img src="https://img.shields.io/badge/Gemini-AI-8E75FF?logo=google" />
-  <img src="https://img.shields.io/badge/Leaflet-OpenStreetMap-2F8555" />
-  <img src="https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwindcss" />
-</p>
+**Project ID:** SKIT/CSE/2023-2027/04  
+**Institution:** Swami Keshvanand Institute of Technology, Management & Gramothan (SKIT), Jaipur  
+**Department:** Computer Science & Engineering (CSE) | Section A  
+**Track:** Innovation | **SDG Mapping:** SDG 11 – Sustainable Cities and Communities  
+**External Evaluation:** Poster Competition  
+**Repository:** [https://github.com/CodeBreaker-0111/SKIT-CSE-2023-2027-04](https://github.com/CodeBreaker-0111/SKIT-CSE-2023-2027-04)  
 
 ---
 
-## 🌆 About NagarSeva
+## 📌 Project Overview
 
-**NagarSeva** is an AI-powered civic issue reporting and tracking platform
-developed to provide citizens with a centralized way to report civic problems,
-submit supporting evidence, share location information, and track the progress
-of reported issues.
-
-The platform focuses on improving the connection between citizens and civic
-administration by combining:
-
-- 🤖 AI-assisted issue categorization
-- 📍 Location-aware civic reporting
-- 🗺️ Jaipur ward-wise GIS mapping
-- 📷 Image and media-based evidence
-- 📊 Citizen dashboards and issue tracking
-- 🌐 Multilingual interaction
-- 🎙️ Voice-based accessibility
-- 🔐 Secure authentication and role-based access
-
-The long-term goal of NagarSeva is to make civic issue reporting **simpler for
-citizens and more organized for authorities**.
+**NagarSeva** is an AI-powered civic issue reporting and tracking platform designed for citizens and municipal authorities in Jaipur. The platform enables residents to report civic problems (potholes, garbage dumps, street lighting, water leakage, etc.) with description, location, and media evidence. Integrated AI capabilities automatically analyze media, predict issue severity and priority, and recommend the relevant municipal department.
 
 ---
 
-# 🎯 Problem Statement
+## 👥 Project Team & Roles
 
-Citizens often face difficulties while reporting everyday civic problems such
-as potholes, garbage accumulation, damaged roads, streetlight failures,
-water-related issues and other local infrastructure problems.
-
-Common problems include:
-
-- Fragmented reporting channels
-- Lack of proper location and evidence
-- Difficulty identifying the responsible department
-- No clear visibility of complaint status
-- Lack of centralized issue information
-- Limited accessibility for different language and user needs
-
-NagarSeva addresses this gap by bringing reporting, AI-assisted classification,
-location mapping and tracking into a single platform.
+| Name | Role & Expertise | Technical Scope |
+| --- | --- | --- |
+| **Aaditya Bansal** | Team Lead (AI/ML & GIS) | Project Management, System Architecture, Gemini AI Integration, Jaipur Ward Mapping |
+| **Anmol Gupta** | Member 1 (Backend & DB) | Backend Services, Supabase PostgreSQL, RLS Policies, Database Architecture |
+| **Anshul Nagar** | Member 2 (Frontend/UI) | Next.js/React Frontend, Tailwind UI, Report Form, Responsive Dashboard, Map UI |
+| **Anushka Agrawal** | Member 3 (Testing & Integration) | API Integration, Testing, Twilio Notifications, Accessibility, i18n & Speech APIs |
 
 ---
 
-# 💡 Our Approach
+## 🛠️ Technology Stack
 
-NagarSeva follows a simple idea:
-
-> **Make civic reporting as easy as taking a photo and as transparent as tracking a delivery.**
-
-A citizen can report an issue using text, media or voice input. The platform
-can then use location information and AI-assisted analysis to help classify
-the issue, estimate its priority, recommend a responsible department and make
-the report available for further action and tracking.
-
----
-
-# ✨ Key Features
-
-| Feature | Description |
-|---|---|
-| 📢 Civic Issue Reporting | Report local civic problems through a structured form |
-| 📷 Image & Video Evidence | Attach supporting media with a report |
-| 🤖 AI Categorization | AI-assisted identification of civic issue categories |
-| 🚦 Priority Analysis | AI-assisted severity and priority assessment |
-| 🏢 Department Recommendation | Suggest the appropriate department for an issue |
-| 📍 Location Capture | Associate reports with geographic locations |
-| 🗺️ Jaipur Ward Mapping | Visualize civic issues across Jaipur wards |
-| 📊 Citizen Dashboard | View submitted reports and their current status |
-| 🔎 Issue Tracking | Follow the lifecycle of submitted complaints |
-| 🌐 Multilingual Support | Support for multiple Indian languages |
-| 🎙️ Voice Reporting | Speech-based reporting for accessibility |
-| 🔊 Text-to-Speech | Voice output for a more accessible experience |
-| 🔐 Authentication | Secure user authentication and account management |
-| 🛠️ Admin Dashboard | Administrative monitoring and issue management |
-| 📱 Responsive UI | Designed for desktop and mobile screens |
+| Layer | Technologies | Status |
+| --- | --- | --- |
+| **Frontend** | Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4 | Active |
+| **Backend & DB** | Supabase PostgreSQL, Supabase Auth, Supabase Storage *(Migrating from Firebase)* | Active / In Migration |
+| **AI Integration** | Google Gemini API (`@google/genai` with `gemini-3.6-flash`) | Active |
+| **GIS & Mapping** | OpenStreetMap, Leaflet, `react-leaflet`, Jaipur Ward Datasets | Active / Ward Layer In Dev |
+| **Notifications** | Twilio SMS/APIs | Planned (Sprint 7) |
+| **Accessibility & i18n** | `i18next`, `react-i18next`, Web Speech API (STT/TTS) | Active |
 
 ---
 
-# 🔄 Platform Workflow
+## 🗺️ Official 8-Sprint Development Roadmap
 
-```mermaid
-flowchart LR
-    A[Citizen] --> B[Report Civic Issue]
-    B --> C[Text / Image / Video / Voice]
-    C --> D[Location Capture]
-    D --> E[Gemini AI Analysis]
-    E --> F[Category + Severity + Priority]
-    F --> G[Department Recommendation]
-    G --> H[Jaipur Ward Mapping]
-    H --> I[Database]
-    I --> J[Admin Dashboard]
-    J --> K[Status Updates]
-    K --> L[Citizen Tracking]
+1. **Sprint 1: System & UI Foundation** *(Completed)*
+   - Project structure, responsive Next.js App Router layout, design tokens, core page routing.
+2. **Sprint 2: Authentication & Database** *(In Progress)*
+   - Supabase Auth setup, PostgreSQL database schema (`profiles`, `reports`, `report_status_history`), RLS policies.
+3. **Sprint 3: Issue Reporting & Media** *(In Progress)*
+   - Citizen report submission form, media upload validation, Supabase Storage `report-media` bucket.
+4. **Sprint 4: AI Analysis & Categorization** *(Active)*
+   - Gemini 3.6 Flash vision analysis, category classification, severity & priority scoring, department routing.
+5. **Sprint 5: Jaipur GIS & Ward Mapping** *(In Progress)*
+   - Jaipur map centering (`[26.9124, 75.7873]`), Leaflet markers, Jaipur ward boundary GeoJSON integration, hotspot visualization.
+6. **Sprint 6: Dashboard & Tracking** *(In Progress)*
+   - Citizen "My Reports" status tracking, Admin monitoring dashboard, status updates & filtering.
+7. **Sprint 7: Notifications & Accessibility** *(Planned)*
+   - Twilio notifications, multilingual language toggle, Web Speech voice interaction, accessibility enhancements.
+8. **Sprint 8: Integration, Testing & Deployment** *(Planned)*
+   - End-to-end integration testing, security audit, build verification, deployment configuration.
+
+---
+
+## 🏗️ Project Architecture & Migration Status
+
+The NagarSeva platform is currently executing a progressive migration from legacy prototype infrastructure to cloud-scale relational architecture:
+
+```text
+Next.js / React Frontend (TypeScript + Tailwind CSS)
+       │
+       ├─► Supabase Auth (OAuth & User Sessions)
+       ├─► Supabase PostgreSQL (profiles, reports, status history)
+       ├─► Supabase Storage (report-media bucket)
+       ├─► Google Gemini API (Image/Video analysis, priority scoring, translation)
+       └─► Leaflet / OpenStreetMap (Jaipur ward-wise GIS mapping)
+```
+
+> **Note on Legacy Modules:** Firebase authentication and Firestore code are being systematically replaced by Supabase services. Firebase modules are retained strictly to preserve working application state until Supabase backend migration passes full integration testing.
+
+---
+
+## ⚡ Local Setup Instructions
+
+```bash
+# 1. Clone repository
+git clone https://github.com/CodeBreaker-0111/SKIT-CSE-2023-2027-04.git
+cd SKIT-CSE-2023-2027-04
+
+# 2. Install dependencies
+npm install
+
+# 3. Configure environment variables (.env.local)
+# Add NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY, GOOGLE_API_KEY
+
+# 4. Start local development server
+npm run dev
+```
+
+Application will run locally at `http://localhost:3000`.
+
+---
+
+## 📄 License & Evaluation Context
+
+Developed for official academic evaluation under **SKIT Jaipur - CSE Department (2023-2027)** for **Poster Competition & Innovation Track**.
