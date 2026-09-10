@@ -116,7 +116,7 @@ export default function ContactPage() {
 
               <div className="mt-4 space-y-1 text-sm text-slate-600">
                 <p className="font-bold text-slate-900 text-base">{t("contact.developer.name", "NagarSeva Project Team")}</p>
-                <p className="font-medium text-slate-700">{t("contact.developer.degree", "Aaditya Bansal, Anmol Gupta, Anshul Nagar, Anushka Agrawal")}</p>
+                <p className="font-medium text-slate-700">{t("contact.developer.degree", "Aaditya Bansal")}</p>
                 <p className="text-slate-500">{t("contact.developer.institution", "SKIT Jaipur — Computer Science & Engineering")}</p>
                 <div className="mt-3">
                   <span className="inline-flex rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-semibold text-emerald-700 border border-emerald-100">
@@ -132,7 +132,7 @@ export default function ContactPage() {
               className="p-6 rounded-3xl border border-slate-200 bg-white/90 backdrop-blur-sm shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <h2 className="text-xl font-semibold text-slate-900">
-                {t("contact.links.title", "Project Repository")}
+                {t("contact.links.title", "Connect with the Team Lead")}
               </h2>
 
               <div className="mt-5 space-y-4">
