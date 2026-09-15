@@ -1,0 +1,5 @@
+# Require the repository owner to review weekly report data and automation changes.
+/team_data/ @CodeBreaker-0111
+/generate_report.py @CodeBreaker-0111
+/.github/workflows/ @CodeBreaker-0111
+/weekly_reports/ @CodeBreaker-0111
