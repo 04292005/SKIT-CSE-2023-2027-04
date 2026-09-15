@@ -1,1 +1,16 @@
-
+{
+  "student_name": "Aaditya Bansal",
+  "weeks": {
+    "2026-W38": {
+      "lines_added": 520,
+      "lines_deleted": 35,
+      "commit_logs": [
+        {
+          "date": "2026-09-15",
+          "hash": "a1b2c3d",
+          "message": "Completed API integration"
+        }
+      ]
+    }
+  }
+}
