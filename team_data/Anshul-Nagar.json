@@ -2,23 +2,13 @@
   "student_name": "Anshul Nagar",
   "weeks": {
     "2026-W38": {
-      "lines_added": 52,
-      "lines_deleted": 5,
+      "lines_added": 0,
+      "lines_deleted": 0,
       "commit_logs": [
         {
-          "date": "2026-09-15",
-          "hash": "a1b2c3d",
-          "message": "Completed API integration"
-        },
-        {
-          "date": "2026-09-16",
-          "hash": "a1b2c3e",
-          "message": "Deleted API integration"
-        },
-        {
-          "date": "2026-09-19",
-          "hash": "a1b2c3e",
-          "message": "Deleted integration"
+          "date": "2026-09-08",
+          "hash": "a1b32e3",
+          "message": "Testing"
         }
       ]
     }
