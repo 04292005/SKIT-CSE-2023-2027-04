@@ -2,6 +2,9 @@
   "student_name": "Aaditya Bansal",
   "weeks": {
     "2026-W38": {
+      "evaluation_start": "2026-09-04",
+      "evaluation_end": "2026-09-10",
+      "generated_on": "2026-09-10",
       "form_number": 3,
       "lines_added": 250,
       "lines_deleted": 60,
