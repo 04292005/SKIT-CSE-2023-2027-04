@@ -106,6 +106,7 @@ def load_team_data(week_id):
     students = {}
     timeline_activity = defaultdict(lambda: defaultdict(int))
     student_logs = defaultdict(list)
+    report_metadata = {}
 
     for json_file in json_files:
         try:
@@ -117,6 +118,14 @@ def load_team_data(week_id):
         student_name = str(payload.get("student_name", json_file.stem)).strip()
         weeks = payload.get("weeks", {})
         week_data = weeks.get(week_id, {}) if isinstance(weeks, dict) else {}
+        if student_name == "Aaditya Bansal":
+        report_metadata = 
+        {
+        "form_number": int(week_data.get("form_number", 3)),
+        "evaluation_start": week_data.get("evaluation_start"),
+        "evaluation_end": week_data.get("evaluation_end"),
+        "generated_on": week_data.get("generated_on")
+        }
 
         form_number = int(week_data.get("form_number", 3) or 3)
         lines_added = int(week_data.get("lines_added", 0) or 0)
@@ -159,7 +168,7 @@ def load_team_data(week_id):
         }
         student_logs[student_name] = logs
 
-    return students, timeline_activity, student_logs, form_number
+    return students, timeline_activity, student_logs, report_metadata
 
 
 # -------------------------------------------------------------
@@ -216,17 +225,37 @@ def generate_pdf(interval="weekly", week_id=None, report_date=None, output_dir=D
     week_id = week_id or current_week_id(report_date)
 
     repo_name, branch_name = get_repo_info()
-    students, timeline_activity, student_logs, form_number = load_team_data(week_id)
+    students, timeline_activity, student_logs, report_metadata = load_team_data(week_id)
 
-    since_date = report_date - datetime.timedelta(days=7)
-    scope_title = f"Last 7 Days (Since {since_date.strftime('%Y-%m-%d')})"
+    evaluation_start = datetime.datetime.strptime(
+    report_metadata["evaluation_start"], "%Y-%m-%d"
+    ).date()
+
+    evaluation_end = datetime.datetime.strptime(
+    report_metadata["evaluation_end"], "%Y-%m-%d"
+    ).date()
+
+    generated_on = datetime.datetime.strptime(
+    report_metadata["generated_on"], "%Y-%m-%d"
+    ).date()
+
+    form_number = report_metadata["form_number"]
+
+    scope_title = (
+    f"{evaluation_start.strftime('%d %b %Y')} – "
+    f"{evaluation_end.strftime('%d %b %Y')}"
+    )
 
     date_stamp = report_date.strftime("%Y-%m-%d")
     report_title = f"Weekly Progress Report (Form-{form_number})"
     
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    doc_name = output_dir / f"{repo_name}_Weekly_Progress_Report_Form-{form_number}_{date_stamp}.pdf"
+    date_stamp = generated_on.strftime("%Y-%m-%d")
+
+doc_name = output_dir / (
+    f"{repo_name}_Weekly_Progress_Report_Form-{form_number}_{date_stamp}.pdf"
+)
 
     doc = SimpleDocTemplate(
         str(doc_name),
@@ -306,7 +335,7 @@ def generate_pdf(interval="weekly", week_id=None, report_date=None, output_dir=D
     story.append(
         Paragraph(
             f"<b>Evaluation Window:</b> {scope_title} &nbsp;|&nbsp; "
-            f"<b>Generated On:</b> {report_date.strftime('%B %d, %Y')}",
+            f"<b>Generated On:</b> {generated_on.strftime('%B %d, %Y')}",
             meta_style,
         )
     )
