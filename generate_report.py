@@ -118,6 +118,7 @@ def load_team_data(week_id):
         weeks = payload.get("weeks", {})
         week_data = weeks.get(week_id, {}) if isinstance(weeks, dict) else {}
 
+        form_number = int(week_data.get("form_number", 3) or 3)
         lines_added = int(week_data.get("lines_added", 0) or 0)
         lines_deleted = int(week_data.get("lines_deleted", 0) or 0)
         raw_logs = week_data.get("commit_logs", []) or []
@@ -158,7 +159,7 @@ def load_team_data(week_id):
         }
         student_logs[student_name] = logs
 
-    return students, timeline_activity, student_logs
+    return students, timeline_activity, student_logs, form_number
 
 
 # -------------------------------------------------------------
@@ -209,23 +210,23 @@ def create_charts(students, timeline_activity):
 # -------------------------------------------------------------
 def generate_pdf(interval="weekly", week_id=None, report_date=None, output_dir=DEFAULT_OUTPUT_DIR):
     if interval != "weekly":
-        raise ValueError("This manual team-JSON version is designed for weekly Form-3 reports.")
+        raise ValueError("This version is designed for weekly reports.")
 
     report_date = report_date or datetime.date.today()
     week_id = week_id or current_week_id(report_date)
 
     repo_name, branch_name = get_repo_info()
-    students, timeline_activity, student_logs = load_team_data(week_id)
+    students, timeline_activity, student_logs, form_number = load_team_data(week_id)
 
     since_date = report_date - datetime.timedelta(days=7)
     scope_title = f"Last 7 Days (Since {since_date.strftime('%Y-%m-%d')})"
 
     date_stamp = report_date.strftime("%Y-%m-%d")
-    report_title = "Weekly Progress Report (Form-3)"
-
+    report_title = f"Weekly Progress Report (Form-{form_number})"
+    
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    doc_name = output_dir / f"{repo_name}_Weekly_Progress_Report_Form-3_{date_stamp}.pdf"
+    doc_name = output_dir / f"{repo_name}_Weekly_Progress_Report_Form-{form_number}_{date_stamp}.pdf"
 
     doc = SimpleDocTemplate(
         str(doc_name),
