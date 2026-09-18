@@ -119,13 +119,12 @@ def load_team_data(week_id):
         weeks = payload.get("weeks", {})
         week_data = weeks.get(week_id, {}) if isinstance(weeks, dict) else {}
         if student_name == "Aaditya Bansal":
-        report_metadata = 
-        {
-        "form_number": int(week_data.get("form_number", 3)),
-        "evaluation_start": week_data.get("evaluation_start"),
-        "evaluation_end": week_data.get("evaluation_end"),
-        "generated_on": week_data.get("generated_on")
-        }
+            report_metadata = {
+                "form_number": int(week_data.get("form_number", 3) or 3),
+                "evaluation_start": week_data.get("evaluation_start"),
+                "evaluation_end": week_data.get("evaluation_end"),
+                "generated_on": week_data.get("generated_on"),
+            }
 
         form_number = int(week_data.get("form_number", 3) or 3)
         lines_added = int(week_data.get("lines_added", 0) or 0)
@@ -227,35 +226,50 @@ def generate_pdf(interval="weekly", week_id=None, report_date=None, output_dir=D
     repo_name, branch_name = get_repo_info()
     students, timeline_activity, student_logs, report_metadata = load_team_data(week_id)
 
+    required_metadata = (
+        "evaluation_start",
+        "evaluation_end",
+        "generated_on",
+    )
+    missing_metadata = [
+        key for key in required_metadata
+        if not report_metadata.get(key)
+    ]
+    if missing_metadata:
+        raise ValueError(
+            "Missing report metadata in team_data/Aaditya-Bansal.json "
+            f"for {week_id}: {', '.join(missing_metadata)}"
+        )
+
     evaluation_start = datetime.datetime.strptime(
-    report_metadata["evaluation_start"], "%Y-%m-%d"
+        report_metadata["evaluation_start"], "%Y-%m-%d"
     ).date()
 
     evaluation_end = datetime.datetime.strptime(
-    report_metadata["evaluation_end"], "%Y-%m-%d"
+        report_metadata["evaluation_end"], "%Y-%m-%d"
     ).date()
 
     generated_on = datetime.datetime.strptime(
-    report_metadata["generated_on"], "%Y-%m-%d"
+        report_metadata["generated_on"], "%Y-%m-%d"
     ).date()
 
-    form_number = report_metadata["form_number"]
+    form_number = int(report_metadata.get("form_number", 3) or 3)
 
     scope_title = (
-    f"{evaluation_start.strftime('%d %b %Y')} – "
-    f"{evaluation_end.strftime('%d %b %Y')}"
+        f"{evaluation_start.strftime('%d %b %Y')} – "
+        f"{evaluation_end.strftime('%d %b %Y')}"
     )
 
-    date_stamp = report_date.strftime("%Y-%m-%d")
     report_title = f"Weekly Progress Report (Form-{form_number})"
-    
+
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
+
     date_stamp = generated_on.strftime("%Y-%m-%d")
 
-doc_name = output_dir / (
-    f"{repo_name}_Weekly_Progress_Report_Form-{form_number}_{date_stamp}.pdf"
-)
+    doc_name = output_dir / (
+        f"{repo_name}_Weekly_Progress_Report_Form-{form_number}_{date_stamp}.pdf"
+    )
 
     doc = SimpleDocTemplate(
         str(doc_name),
@@ -486,7 +500,7 @@ doc_name = output_dir / (
 # CLI
 # -------------------------------------------------------------
 def parse_args():
-    parser = argparse.ArgumentParser(description="Generate the Form-3 weekly progress report from member JSON files.")
+    parser = argparse.ArgumentParser(description="Generate the weekly progress report from member JSON files.")
     parser.add_argument("interval", nargs="?", default="weekly", choices=["weekly"], help="Report type")
     parser.add_argument("--week", dest="week_id", default=None, help="ISO week, e.g. 2026-W38")
     parser.add_argument("--report-date", dest="report_date", default=None, help="Report date YYYY-MM-DD")
