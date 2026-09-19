@@ -159,12 +159,13 @@ def load_team_data(week_id):
                 # Preserve the row in the report, but simply omit it from the graph timeline.
                 pass
 
+        if logs:
         students[student_name] = {
-            "commits": len(logs),
-            "added": lines_added,
-            "deleted": lines_deleted,
-            "active_days": active_days,
-        }
+        "commits": len(logs),
+        "added": lines_added,
+        "deleted": lines_deleted,
+        "active_days": active_days,
+    }
         student_logs[student_name] = logs
 
     return students, timeline_activity, student_logs, report_metadata
