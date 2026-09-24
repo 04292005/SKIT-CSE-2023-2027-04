@@ -41,13 +41,13 @@
 
 ## 🗺️ Official 8-Sprint Development Roadmap
 
-1. **Sprint 1: System & UI Foundation** *(Completed)*
+1. **Sprint 1: System & UI Foundation** *(Continuously Improving)*
    - Project structure, responsive Next.js App Router layout, design tokens, core page routing.
 2. **Sprint 2: Authentication & Database** *(In Progress)*
    - Supabase Auth setup, PostgreSQL database schema (`profiles`, `reports`, `report_status_history`), RLS policies.
 3. **Sprint 3: Issue Reporting & Media** *(In Progress)*
    - Citizen report submission form, media upload validation, Supabase Storage `report-media` bucket.
-4. **Sprint 4: AI Analysis & Categorization** *(Active)*
+4. **Sprint 4: AI Analysis & Categorization** *(Getting Trained)*
    - Gemini 3.6 Flash vision analysis, category classification, severity & priority scoring, department routing.
 5. **Sprint 5: Jaipur GIS & Ward Mapping** *(In Progress)*
    - Jaipur map centering (`[26.9124, 75.7873]`), Leaflet markers, Jaipur ward boundary GeoJSON integration, hotspot visualization.
